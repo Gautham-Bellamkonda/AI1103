@@ -153,12 +153,12 @@ Given that $X \in \{ -a, +a\}$ is a random variable.
 \end{align}
 Also, $Z$ is chosen from Gaussian Distribution with mean $\beta X$ and unit variance.
 \begin{align}
-\therefore \Pr(Z=p) = \dfrac{1}{\sqrt{2\pi}}\,\exp \left(-\frac{(p - \beta X)^2}{2} \right)  \\
-\Leftrightarrow \Pr(Y = p + X) = \dfrac{1}{\sqrt{2\pi}}\,\exp \left(-\frac{(p - \beta X)^2}{2} \right)  \\
-\Leftrightarrow \Pr(Y = u) = \dfrac{1}{\sqrt{2\pi}}\,\exp \left(-\frac{(u - X - \beta X)^2}{2} \right)  \\
-= \dfrac{1}{\sqrt{2\pi}}\,\exp \left(-\frac{(u - X(1 + \beta))^2}{2} \right) \\
-\therefore \Pr(Y = u | X = a) = \dfrac{1}{\sqrt{2\pi}}\,\exp \left(-\frac{(u - a(1 + \beta))^2}{2} \right) \label{eqn 2.0.7} \\
-\& \Pr(Y = u | X = -a) = \dfrac{1}{\sqrt{2\pi}}\,\exp \left(-\frac{(u + a(1 + \beta))^2}{2} \right) \label{eqn 2.0.8}
+\therefore \Pr(Z=z) = \dfrac{1}{\sqrt{2\pi}}\,\exp \left(-\frac{(z - \beta X)^2}{2} \right)  \\
+\Leftrightarrow \Pr(Y = z + X) = \dfrac{1}{\sqrt{2\pi}}\,\exp \left(-\frac{(z - \beta X)^2}{2} \right)  \\
+\Leftrightarrow \Pr(Y = y) = \dfrac{1}{\sqrt{2\pi}}\,\exp \left(-\frac{(y - X - \beta X)^2}{2} \right)  \\
+= \dfrac{1}{\sqrt{2\pi}}\,\exp \left(-\frac{(y - X(1 + \beta))^2}{2} \right) \\
+\therefore \Pr(Y = y | X = a) = \dfrac{1}{\sqrt{2\pi}}\,\exp \left(-\frac{(y - a(1 + \beta))^2}{2} \right) \label{eqn 2.0.7} \\
+\& \Pr(Y = y | X = -a) = \dfrac{1}{\sqrt{2\pi}}\,\exp \left(-\frac{(y + a(1 + \beta))^2}{2} \right) \label{eqn 2.0.8}
 \end{align}
 Since $X \in \{ -a, +a\}$ is also a random variable,
 %\begin{align}
@@ -173,10 +173,10 @@ Since $X \in \{ -a, +a\}$ is also a random variable,
 % \end{aligned}
 %\end{align}
 \begin{align}
-\Pr(Y = u) = &\Pr(Y=u | X = a)\Pr(X=a) \nonumber \\
-               & + \Pr(Y=u | X = -a)\Pr(X=-a)\\
- = &\dfrac{1}{2} \cdot \dfrac{1}{\sqrt{2\pi}}\,\exp \left(-\frac{(u - a(1 + \beta))^2}{2} \right) \nonumber \\
-      &+ \dfrac{1}{2} \cdot \dfrac{1}{\sqrt{2\pi}}\,\exp \left(-\frac{(u + a(1 + \beta))^2}{2} \right)
+\Pr(Y = y) = &\Pr(Y=y | X = a)\Pr(X=a) \nonumber \\
+               & + \Pr(Y=y | X = -a)\Pr(X=-a)\\
+ = &\dfrac{1}{2} \cdot \dfrac{1}{\sqrt{2\pi}}\,\exp \left(-\frac{(y - a(1 + \beta))^2}{2} \right) \nonumber \\
+      &+ \dfrac{1}{2} \cdot \dfrac{1}{\sqrt{2\pi}}\,\exp \left(-\frac{(y + a(1 + \beta))^2}{2} \right)
 \end{align}
 Therefore, the resultant signal $Y = X+Z$ is comprised of $X$ which can take either positive or negative value, and some noise $Z$. The detector (which has zero threshold) can give us incorrect bits when $X = +a$ and $Y<0$ (BER$_{+a}$) or $X=-a$ and $Y<0$ (BER$_{-a}$), as shown in the graph below.
 ~\\[-2em]
@@ -189,17 +189,17 @@ Therefore, the resultant signal $Y = X+Z$ is comprised of $X$ which can take eit
 \therefore \text{BER} = {}& \text{BER}_{+a} + \text{BER}_{-a}\\
 = {}& \Pr(Y < 0, X = a) + \Pr(Y>0, X = -a)\\
  = {}& \Pr(Y<0 | X = a) \Pr(X=a) \nonumber \\ &+ \Pr(Y>0 | X = -a) \Pr(X=-a)\\
- = {}& \int_{- \infty} ^ 0 \dfrac{1}{2} \cdot \Pr(Y = u | X = a) du \nonumber \\
- &+ \int_{0} ^{ \infty} \dfrac{1}{2} \cdot \Pr(Y = u | X = -a) du
+ = {}& \int_{- \infty} ^ 0 \dfrac{1}{2} \cdot \Pr(Y = y | X = a) dy \nonumber \\
+ &+ \int_{0} ^{ \infty} \dfrac{1}{2} \cdot \Pr(Y = y | X = -a) dy
 \end{align}
-On substituting the values of $\Pr(Y=u|X=a)$ and\\
-$\Pr(Y=u|X=-a)$ from \ref{eqn 2.0.7} and \ref{eqn 2.0.8}, 
+On substituting the values of $\Pr(Y=y|X=a)$ and\\
+$\Pr(Y=y|X=-a)$ from \ref{eqn 2.0.7} and \ref{eqn 2.0.8}, 
 \begin{align}
-\text{BER} = {}& \int_{- \infty } ^ 0 \dfrac{1}{2\sqrt{2\pi}}\,\exp \left(-\frac{(u - a(1 + \beta))^2}{2} \right) du \nonumber \\
-&+ \int_{0} ^ {\infty } \dfrac{1}{2\sqrt{2\pi}}\,\exp \left(-\frac{(u + a(1 + \beta))^2}{2} \right) du\\
- = {}& \int_{0} ^ {\infty } \dfrac{1}{2\sqrt{2\pi}}\,\exp \left(-\frac{(u + a(1 + \beta))^2}{2} \right) du \nonumber \\
- &+ \int_{0} ^ {\infty } \dfrac{1}{2\sqrt{2\pi}}\,\exp \left(-\frac{(u + a(1 + \beta))^2}{2} \right) du\\
- = {}& \int_{0} ^ {\infty } \dfrac{1}{\sqrt{2\pi}}\,\exp \left(-\frac{(u + a(1 + \beta))^2}{2} \right) du \label{eqn 2.0.17}
+\text{BER} = {}& \int_{- \infty } ^ 0 \dfrac{1}{2\sqrt{2\pi}}\,\exp \left(-\frac{(y - a(1 + \beta))^2}{2} \right) dy \nonumber \\
+&+ \int_{0} ^ {\infty } \dfrac{1}{2\sqrt{2\pi}}\,\exp \left(-\frac{(y + a(1 + \beta))^2}{2} \right) dy\\
+ = {}& \int_{0} ^ {\infty } \dfrac{1}{2\sqrt{2\pi}}\,\exp \left(-\frac{(y + a(1 + \beta))^2}{2} \right) dy \nonumber \\
+ &+ \int_{0} ^ {\infty } \dfrac{1}{2\sqrt{2\pi}}\,\exp \left(-\frac{(y + a(1 + \beta))^2}{2} \right) dy\\
+ = {}& \int_{0} ^ {\infty } \dfrac{1}{\sqrt{2\pi}}\,\exp \left(-\frac{(y + a(1 + \beta))^2}{2} \right) dy \label{eqn 2.0.17}
 \end{align} 
 From the definition of $Q(v)$, it is easy to see that the expression in \ref{eqn 2.0.17} is equal to $Q(a(1+\beta))$
 \begin{align}
