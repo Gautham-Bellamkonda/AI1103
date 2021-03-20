@@ -146,66 +146,114 @@ When $\beta = -0.3$, BER is closest to
 \item $10^{-2}$
 \end{enumerate}
 \section{Solution}
-Given that $X \in \{ -a, +a\}$ is a random variable.
+Given that the threshold of the detector is zero. Define a detector function $g$ such that
 \begin{align}
-\Pr(X=a) &= \dfrac{n(X=a)}{2} = \dfrac{1}{2}\\
-\Pr(X=-a) &= \dfrac{n(X=-a)}{2} = \dfrac{1}{2}
+g(Y) = 
+\begin{cases}
+a & Y>0 \\
+-a & Y<0
+\end{cases}
 \end{align}
-Also, $Z$ is chosen from Gaussian Distribution with mean $\beta X$ and unit variance.
+It is given that $X \in \{ -a, a\}$ is a random variable.
 \begin{align}
-\therefore F_Z(z) &= \text{G} \left( \dfrac{z - \beta X}{1} \right)\\
-&= \dfrac{1}{\sqrt{2\pi}}\, \int_{-\infty} ^z \exp \left( \dfrac{-(z-\beta X)^2}{2} \right) dz
+\therefore \Pr(X=a) &= \dfrac{1}{2}\\
+\& \; \Pr(X=-a) &= \dfrac{1}{2}
 \end{align}
-On differentiating both the sides with respect to $z$, we get
+Since the noise in the signal, $Z$ is chosen independently from a Gaussian distribution with mean $ \mu = \beta X$ and unit variance, it follows that
 \begin{align}
-f_Z(z) &= \dfrac{d}{dz}F_Z(z) \\
-&= \dfrac{d}{dz} \left[ \dfrac{1}{\sqrt{2\pi}}\, \int_{-\infty} ^z \exp \left( \dfrac{-(z-\beta X)^2}{2} \right) dz \right] \\
- &= \dfrac{1}{\sqrt{2\pi}}\,\exp \left(-\frac{(z - \beta X)^2}{2} \right)  \\
-\Leftrightarrow f_Y(z + X) &= \dfrac{1}{\sqrt{2\pi}}\,\exp \left(-\frac{(z - \beta X)^2}{2} \right)  \\
-\Leftrightarrow f_Y(y) &= \dfrac{1}{\sqrt{2\pi}}\,\exp \left(-\frac{(y - X - \beta X)^2}{2} \right)  \\
-&= \dfrac{1}{\sqrt{2\pi}}\,\exp \left(-\frac{(y - X(1 + \beta))^2}{2} \right) \\
-\therefore f_Y(y \;|\; X = a) &= \dfrac{1}{\sqrt{2\pi}}\,\exp \left(-\frac{(y - a(1 + \beta))^2}{2} \right) \label{eqn 2.0.9} \\
-\& \; f_Y(y \;|\; X = -a) &= \dfrac{1}{\sqrt{2\pi}}\,\exp \left(-\frac{(y + a(1 + \beta))^2}{2} \right) \label{eqn 2.0.10}
+F_Z(z) &= \int_{-\infty}^{z} \dfrac{1}{\sqrt{2\pi}} \exp \left( \dfrac{-(z - \beta X)^2}{2} \right) dz \\
+&= \int_{-\infty}^{z - \beta X} \dfrac{1}{\sqrt{2\pi}} \exp \left( \dfrac{-z^2}{2} \right) dz \\
+&= \int_{\beta X-z}^{\infty} \dfrac{1}{\sqrt{2\pi}} \exp \left( \dfrac{-z^2}{2} \right) dz \\
+&= Q(\beta X - z) \label{eqn 2.0.7}
 \end{align}
-Since $X \in \{ -a, +a\}$ is also a random variable,
+Also, it is easy to see that 
 \begin{align}
-f_Y(y) = &f_Y(y\;|\;X = a)\Pr(X=a) \nonumber \\
-               &+ f_Y(y\;|\;X = -a)\Pr(X=-a)\\
- = &\dfrac{1}{2} \cdot \dfrac{1}{\sqrt{2\pi}}\,\exp \left(-\frac{(y - a(1 + \beta))^2}{2} \right) \nonumber \\
-      &+ \dfrac{1}{2} \cdot \dfrac{1}{\sqrt{2\pi}}\,\exp \left(-\frac{(y + a(1 + \beta))^2}{2} \right)
+Q(-v) = 1 - Q(v) \; \forall \; v \in \mathbb{R} \label{eqn 2.0.8}
 \end{align}
-Therefore, the resultant signal $Y = X+Z$ is comprised of $X$ which can take either positive or negative value, and some noise $Z$. The detector (which has zero threshold) can give us incorrect bits when $X = +a$ and $Y<0$ (BER$_{+a}$) or $X=-a$ and $Y<0$ (BER$_{-a}$), as shown in Fig. \ref{CDF_Y} below.
-
-\begin{figure}
+The detector can record erroneous bits in the signal iff
+\begin{align}
+X>0 \; &, \; g(Y) = -a \; (\text{Call this BER}_{+a}) \text{ or}\\
+X<0 \; &, \; g(Y) = a \; (\text{Call this BER}_{-a})
+\end{align}
+\begin{align}
+\therefore \text{BER}_{+a} &= \Pr(g(Y) = -a \;,\; X = a)\\
+&= \Pr(g(Y) = -a \;|\; X = a) \Pr(X=a)\\
+&= \Pr(Y < 0 \;|\; X = a) \Pr(X=a)\\
+&= \dfrac{1}{2} \times \Pr(X+Z < 0 \;|\; X = a) \\
+&= \dfrac{1}{2} \times \Pr(a+Z < 0 \;|\; X = a) \\
+&= \dfrac{1}{2} \times \Pr(Z < -a \;|\; X = a) \\
+&= \dfrac{1}{2} \times F_Z(-a)\\
+&= \dfrac{1}{2} \times Q(\beta X + a) \; \text{ (From (\ref{eqn 2.0.7}))}\\
+&= \dfrac{1}{2} \times Q(a \beta + a)\\
+&= \dfrac{1}{2} \times Q(a(1+\beta))\\
+\& \; \text{BER}_{-a} &= \Pr(g(Y) = a \;,\; X = -a)\\
+&= \Pr(g(Y) = a \;|\; X = -a) \Pr(X=-a)\\
+&= \Pr(Y > 0 \;|\; X = -a) \Pr(X=-a)\\
+&= \dfrac{1}{2} \times \Pr(X+Z > 0 \;|\; X = -a) \\
+&= \dfrac{1}{2} \times \Pr(Z-a > 0 \;|\; X = -a) \\
+&= \dfrac{1}{2} \times \Pr(Z > a \;|\; X = -a) \\
+&= \dfrac{1}{2} \times \left( 1 - F_Z(a) \right) \\
+&= \dfrac{1}{2} \times \left( 1 - Q(\beta X -a) \right) \; \text{ (From (\ref{eqn 2.0.7}))}\\
+&= \dfrac{1}{2} \times \left( 1 - Q(-a \beta -a) \right) \\
+&= \dfrac{1}{2} \times Q(a(1+\beta)) \; \text{ (From (\ref{eqn 2.0.8}))}\\
+\therefore \text{BER} &= \text{BER}_{+a} + \text{BER}_{-a}\\
+&= Q(a(1+\beta))
+\end{align} 
+\begin{figure}[!hbt]
     \centering
 	\includegraphics[width=\columnwidth]{./Figures/Figure_1.png}
-    \caption{The CDF of \textit{Y}}
+    \caption{Theory vs Simulated plot of BER}
     \label{CDF_Y}
 \end{figure}
-\begin{align}
-\therefore \text{BER} = {}& \text{BER}_{+a} + \text{BER}_{-a}\\
-= {}& f_Y(y < 0, X = a) + f_Y(y>0, X = -a)\\
- = {}& f_Y(y<0\;|\;X = a) \Pr(X=a) \nonumber \\ &+ f_Y(y>0\;|\;X = -a) \Pr(X=-a)\\
- = {}& \int_{- \infty} ^ 0 \dfrac{1}{2} \cdot f_Y(y\;|\;X = a) dy \nonumber \\
- &+ \int_{0} ^{ \infty} \dfrac{1}{2} \cdot f_Y(y\;|\;X = -a) dy
-\end{align}
-On substituting the values of $f_Y(y\;|\;X=a)$ and\\
-$f_Y(y\;|\;X=-a)$ from \ref{eqn 2.0.9} and \ref{eqn 2.0.10}, 
-\begin{align}
-\text{BER} = {}& \int_{- \infty } ^ 0 \dfrac{1}{2\sqrt{2\pi}}\,\exp \left(-\frac{(y - a(1 + \beta))^2}{2} \right) dy \nonumber \\
-&+ \int_{0} ^ {\infty } \dfrac{1}{2\sqrt{2\pi}}\,\exp \left(-\frac{(y + a(1 + \beta))^2}{2} \right) dy\\
- = {}& \int_{0} ^ {\infty } \dfrac{1}{2\sqrt{2\pi}}\,\exp \left(-\frac{(y + a(1 + \beta))^2}{2} \right) dy \nonumber \\
- &+ \int_{0} ^ {\infty } \dfrac{1}{2\sqrt{2\pi}}\,\exp \left(-\frac{(y + a(1 + \beta))^2}{2} \right) dy\\
- = {}& \int_{0} ^ {\infty } \dfrac{1}{\sqrt{2\pi}}\,\exp \left(-\frac{(y + a(1 + \beta))^2}{2} \right) dy \label{eqn 2.0.19}
-\end{align} 
-From the definition of $Q(v)$, it is easy to see that the expression in \ref{eqn 2.0.19} is equal to $Q(a(1+\beta))$
-\begin{align}
-\therefore \text{BER} = Q(a(1+\beta ))
-\end{align}
+%Also, $Z$ is chosen from Gaussian Distribution with mean $\beta X$ and unit variance. 
+%\begin{align}
+%\therefore F_Z(z) &= \text{G} \left( \dfrac{z - \beta X}{1} \right)\\
+%&= \dfrac{1}{\sqrt{2\pi}}\, \int_{-\infty} ^z \exp \left( \dfrac{-(z-\beta X)^2}{2} \right) dz
+%\end{align}
+%On differentiating both the sides with respect to $z$, we get
+%\begin{align}
+%f_Z(z) &= \dfrac{d}{dz}F_Z(z) \\
+%&= \dfrac{d}{dz} \left[ \dfrac{1}{\sqrt{2\pi}}\, \int_{-\infty} ^z \exp \left( \dfrac{-(z-\beta X)^2}{2} \right) dz \right] \\
+% &= \dfrac{1}{\sqrt{2\pi}}\,\exp \left(-\frac{(z - \beta X)^2}{2} \right)  \\
+%\Leftrightarrow f_Y(z + X) &= \dfrac{1}{\sqrt{2\pi}}\,\exp \left(-\frac{(z - \beta X)^2}{2} \right)  \\
+%\Leftrightarrow f_Y(y) &= \dfrac{1}{\sqrt{2\pi}}\,\exp \left(-\frac{(y - X - \beta X)^2}{2} \right)  \\
+%&= \dfrac{1}{\sqrt{2\pi}}\,\exp \left(-\frac{(y - X(1 + \beta))^2}{2} \right) \\
+%\therefore \Pr(Y=y \;|\; X = a) &= \dfrac{1}{\sqrt{2\pi}}\,\exp \left(-\frac{(y - a(1 + \beta))^2}{2} \right) \label{eqn 2.0.14} \\
+%\& \; \Pr(Y=y \;|\; X = -a) &= \dfrac{1}{\sqrt{2\pi}}\,\exp \left(-\frac{(y + a(1 + \beta))^2}{2} \right) \label{eqn 2.0.15}
+%\end{align}
+%Since $X \in \{ -a, +a\}$ is also a random variable,
+%\begin{align}
+%f_Y(y) = &\Pr(Y=y \;|\; X = a)\Pr(X=a) \nonumber \\
+%               &+ \Pr(Y=y \;|\; X = -a)\Pr(X=-a)\\
+% = &\dfrac{1}{2} \cdot \dfrac{1}{\sqrt{2\pi}}\,\exp \left(-\frac{(y - a(1 + \beta))^2}{2} \right) \nonumber \\
+%      &+ \dfrac{1}{2} \cdot \dfrac{1}{\sqrt{2\pi}}\,\exp \left(-\frac{(y + a(1 + \beta))^2}{2} \right)
+%\end{align}
+
+%\begin{align}
+%\therefore \text{BER} = {}& \text{BER}_{+a} + \text{BER}_{-a}\\
+%% = {}& f_Y(y < 0, X = a) + f_Y(y>0, X = -a)\\
+% = {}& \Pr(g(Y) = -a \;|\; X = a) \Pr(X=a) \nonumber \\ &+ \Pr(g(Y) = a \;|\; X = -a) \Pr(X=-a)\\
+% = {}& \int_{- \infty} ^ 0 \dfrac{1}{2} \cdot \Pr(Y=y \;|\; X = a) dy \nonumber \\
+% &+ \int_{0} ^{ \infty} \dfrac{1}{2} \cdot \Pr(Y=y \;|\; X = -a) dy
+%\end{align}
+%On substituting the values of $\Pr(Y=y \;|\; X = a)$ and
+%$\Pr(Y=y \;|\; X = -a)$ from \ref{eqn 2.0.14} and \ref{eqn 2.0.15}, we get
+%\begin{align}
+%\text{BER} = {}& \int_{- \infty } ^ 0 \dfrac{1}{2\sqrt{2\pi}}\,\exp \left(-\frac{(y - a(1 + \beta))^2}{2} \right) dy \nonumber \\
+%&+ \int_{0} ^ {\infty } \dfrac{1}{2\sqrt{2\pi}}\,\exp \left(-\frac{(y + a(1 + \beta))^2}{2} \right) dy\\
+% = {}& \int_{0} ^ {\infty } \dfrac{1}{2\sqrt{2\pi}}\,\exp \left(-\frac{(y + a(1 + \beta))^2}{2} \right) dy \nonumber \\
+% &+ \int_{0} ^ {\infty } \dfrac{1}{2\sqrt{2\pi}}\,\exp \left(-\frac{(y + a(1 + \beta))^2}{2} \right) dy\\
+% = {}& \int_{0} ^ {\infty } \dfrac{1}{\sqrt{2\pi}}\,\exp \left(-\frac{(y + a(1 + \beta))^2}{2} \right) dy \label{eqn 2.0.19}
+%\end{align} 
+%From the definition of $Q(v)$, it is easy to see that the expression in \ref{eqn 2.0.19} is equal to $Q(a(1+\beta))$
+%\begin{align}
+%\therefore \text{BER} = Q(a(1+\beta ))
+%\end{align}
 When $\beta = 0$, it is given that 
 \begin{align}
 \text{BER} = Q(a) &= 10^{-8}
 \end{align}
+~\\
 On computing, $Q(1) \approx 0.16$. Since $Q(a)<Q(1)$, it is easy to see that $a>1$ (as $Q(x)$ is a decreasing function)
 \begin{align}
 \therefore e^{-a^2 / 2} &= 10^{-8}\\
