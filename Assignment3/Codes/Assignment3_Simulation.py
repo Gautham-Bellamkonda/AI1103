@@ -14,28 +14,30 @@ data = []
 a = 6.069
     #create a gaussian r.v. for simulation
 for i in range(0,points):
-
-    err_1 = 0
+    #make a gaussian distribution of Z with mean betaX and compare it with -a and +a
+    #1-> X = a
+    count_1 = 0
     for j in range(0,simlen):
         elem = 0
         for k in range(1,11):
             elem = elem + random()
         elem = elem - 5 + beta_i*a
-        if(elem < -a):
-            err_1 = err_1 + 1
-    err_n1 = err_1/(simlen)
-    err_2 = 0
+        if(elem < -a):                  
+            count_1 = count_1 + 1
+    prob_1 = count_1/(simlen)
+    #2-> X = -a
+    count_2 = 0
     for j in range(0,simlen):
         elem = 0
         for k in range(1,11):
             elem = elem + random()
         elem = elem - 5 - beta_i*a
         if(elem > a):
-            err_2 = err_2 + 1
-    err_n2 = err_2/(simlen)
-    err_n = (err_n1 + err_n2)/2
-    BER_sim.append(err_n)
-    beta_i = beta_i + 0.1
+            count_2 = count_2 + 1
+    prob_2 = count_2/(simlen)
+    prob = (prob_1 + prob_2)/2
+    BER_sim.append(prob)            
+    beta_i = beta_i + 0.1           #incrementing
 #Q function thereoretical
 BER_Q = 1-norm.cdf(a*(1+beta), 0, 1)
 plt.plot(beta, BER_sim, 'o')
