@@ -40,6 +40,7 @@ for i in range(0,points):
 BER_Q = 1-norm.cdf(a*(1+beta), 0, 1)
 plt.plot(beta, BER_sim, 'o')
 plt.plot(beta, BER_Q, '-')
+plt.grid()
 plt.legend(["Simulated", "Theoretical"])
 plt.title(r"Bit Error Rate (BER) for different values of $\beta$") 
 plt.xlabel(r'$ \beta$ axis')
