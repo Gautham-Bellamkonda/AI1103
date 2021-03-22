@@ -40,8 +40,10 @@ for i in range(0,points):
     beta_i = beta_i + 0.1           #incrementing
 #Q function thereoretical
 BER_Q = 1-norm.cdf(a*(1+beta), 0, 1)
-plt.plot(beta, BER_sim, 'o')
-plt.plot(beta, BER_Q, '-')
+plt.semilogy(beta, BER_sim, 'o')
+plt.semilogy(beta, BER_Q, '-')
+plt.plot([-0.3],[0.0000059], 'go')
+plt.text(-0.25,0.000005,r'($\beta = -0.3$, BER = 6.7 $\times 10^{-6}$ )')
 plt.grid()
 plt.legend(["Simulated", "Theoretical"])
 plt.title(r"Bit Error Rate (BER) for different values of $\beta$") 

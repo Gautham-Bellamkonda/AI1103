@@ -150,7 +150,7 @@ Given that the threshold of the detector is zero. Define a detector function $g$
 \begin{align}
 g(Y) = 
 \begin{cases}
-a & Y>0 \\
++a & Y>0 \\
 -a & Y<0
 \end{cases}
 \end{align}
@@ -179,7 +179,7 @@ X<0 \; &, \; g(Y) = a \; (\text{Call this BER}_{-a})
 &= \Pr(g(Y) = -a \;|\; X = a) \Pr(X=a)\\
 &= \Pr(Y < 0 \;|\; X = a) \Pr(X=a)\\
 &= \dfrac{1}{2} \times \Pr(X+Z < 0 \;|\; X = a) \\
-&= \dfrac{1}{2} \times \Pr(a+Z < 0 \;|\; X = a) \\
+% &= \dfrac{1}{2} \times \Pr(a+Z < 0 \;|\; X = a) \\
 % &= \dfrac{1}{2} \times \Pr(Z < -a \;|\; X = a) \\
 &= \dfrac{1}{2} \times F_Z(-a)\\
 &= \dfrac{1}{2} \times Q(\beta X + a) \; \text{ (From (\ref{eqn 2.0.7}))}\\
@@ -191,7 +191,7 @@ X<0 \; &, \; g(Y) = a \; (\text{Call this BER}_{-a})
 &= \Pr(g(Y) = a \;|\; X = -a) \Pr(X=-a)\\
 &= \Pr(Y > 0 \;|\; X = -a) \Pr(X=-a)\\
 &= \dfrac{1}{2} \times \Pr(X+Z > 0 \;|\; X = -a) \\
-&= \dfrac{1}{2} \times \Pr(Z-a > 0 \;|\; X = -a) \\
+% &= \dfrac{1}{2} \times \Pr(Z-a > 0 \;|\; X = -a) \\
 % &= \dfrac{1}{2} \times \Pr(Z > a \;|\; X = -a) \\
 &= \dfrac{1}{2} \times \left( 1 - F_Z(a) \right) \\
 &= \dfrac{1}{2} \times \left( 1 - Q(\beta X -a) \right) \; \text{ (From (\ref{eqn 2.0.7}))}\\
@@ -204,7 +204,7 @@ X<0 \; &, \; g(Y) = a \; (\text{Call this BER}_{-a})
 \end{align} 
 \begin{figure}[!hbt]
     \centering
-	\includegraphics[width=\columnwidth]{./Figures/Figure_1.png}
+	\includegraphics[width=\columnwidth]{./Figures/Figure_2.png}
     \caption{Theory vs Simulated plot of BER}
     \label{CDF_Y}
 \end{figure}
