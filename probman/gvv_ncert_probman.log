@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.12)  29 MAR 2021 16:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.12)  29 MAR 2021 17:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1529,14 +1529,17 @@ Package: chngcntr 2018/04/09 v1.1a change counter resetting
 Package chngcntr Info: \counterwithout already defined.
 (chngcntr)             Quitting chngcntr on input line 21.
 )
-(./gvv_ncert_probman.aux)
+(./gvv_ncert_probman.aux
+
+LaTeX Warning: Label `fig:uni_cdf' multiply defined.
+
+)
 \openout1 = `gvv_ncert_probman.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 89.
 LaTeX Font Info:    Trying to load font information for OML+txmi on input line 
 89.
-
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    ... okay on input line 89.
@@ -1864,32 +1867,37 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [9])
 (./chapters/cond.tex
-Overfull \hbox (12.06474pt too wide) detected at line 42
-[]
- []
+Underfull \vbox (badness 6094) has occurred while \output is active []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+<./figs/cond/Pe_vs_gamma.png, id=583, 462.528pt x 346.896pt>
+File: ./figs/cond/Pe_vs_gamma.png Graphic file (type png)
+<use ./figs/cond/Pe_vs_gamma.png>
+Package pdftex.def Info: ./figs/cond/Pe_vs_gamma.png  used on input line 52.
+(pdftex.def)             Requested size: 252.0pt x 189.00427pt.
 )
-(./chapters/twoD.tex) (./chapters/laplace.tex [10]) (./chapters/uni2other.tex
+(./chapters/twoD.tex [10 <./figs/cond/Pe_vs_gamma.png>])
+(./chapters/laplace.tex) (./chapters/uni2other.tex
 (./solutions/10/1/solution.tex
+Underfull \vbox (badness 6658) has occurred while \output is active []
+
+
 
 LaTeX Warning: Reference `eq:probman_cdf_U' on page 11 undefined on input line 
 12.
 
-<figs/quantile/quantile.png, id=631, 462.528pt x 346.896pt>
+<figs/quantile/quantile.png, id=628, 462.528pt x 346.896pt>
 File: figs/quantile/quantile.png Graphic file (type png)
 <use figs/quantile/quantile.png>
 Package pdftex.def Info: figs/quantile/quantile.png  used on input line 51.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
-)) (./chapters/misc.tex [11 <./figs/quantile/quantile.png>]) [12
+)) (./chapters/misc.tex
+Underfull \vbox (badness 3168) has occurred while \output is active []
 
-]
+ [11])
+[12 <./figs/quantile/quantile.png>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 338.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 338.
-
-(./gvv_ncert_probman.aux)
+ (./gvv_ncert_probman.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 338.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 338.
 Package rerunfilecheck Info: File `gvv_ncert_probman.out' has not changed.
@@ -1898,13 +1906,16 @@ Package rerunfilecheck Info: File `gvv_ncert_probman.out' has not changed.
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 338.
  ) 
 Here is how much of TeX's memory you used:
- 51702 strings out of 481239
- 1280689 string characters out of 5920377
- 1770398 words of memory out of 5000000
- 65628 multiletter control sequences out of 15000+600000
+ 51710 strings out of 481239
+ 1280887 string characters out of 5920377
+ 1770459 words of memory out of 5000000
+ 65633 multiletter control sequences out of 15000+600000
  611991 words of font info for 193 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  63i,18n,98p,773b,1166s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1919,10 +1930,10 @@ are/texlive/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb></usr/share/texlive
 /fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
 w/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on gvv_ncert_probman.pdf (12 pages, 253936 bytes).
+Output written on gvv_ncert_probman.pdf (12 pages, 269107 bytes).
 PDF statistics:
- 785 PDF objects out of 1000 (max. 8388607)
- 670 compressed objects within 7 object streams
- 341 named destinations out of 1000 (max. 500000)
- 307 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 788 PDF objects out of 1000 (max. 8388607)
+ 671 compressed objects within 7 object streams
+ 342 named destinations out of 1000 (max. 500000)
+ 312 words of extra memory for PDF output out of 10000 (max. 10000000)
 

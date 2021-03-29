@@ -35,17 +35,24 @@ P_e &= \pr{\hat{X} = -1|X=1} \\
 If $N>0$, $F_A(-N) = 0$. Therefore,
 \begin{align}
 P_e &= \int_{-\infty}^{0} F_A(-n) \times f_N(n) dn\\
-&= \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{0} \brak{1-\exp \left( -\frac{n^2}{2\sigma^2} \right) } \times \exp \left( -\frac{n^2}{2} \right) dn\\
-&= \frac{1}{\sqrt{2\pi}} \int_{0}^{\infty} \exp \left( -\frac{n^2}{2} \right) - \exp \left( -\frac{n^2(1+\sigma^2)}{2\sigma^2} \right) dn\\
-&= \frac{\sqrt{2\pi} - \sqrt{\frac{\pi(1+\sigma^2)}{2\sigma^2}}}{\sqrt{2\pi}}\\
-&= 1 - \sqrt{\frac{1+\sigma^2}{4\sigma^2}}
+&= \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{0} \brak{1-\exp \left( -\frac{n^2}{2\sigma^2} \right) }\exp \left( -\frac{n^2}{2} \right) dn\\
+&= \frac{1}{\sqrt{2\pi}} \int_{0}^{\infty} \exp \left( -\frac{n^2}{2} \right)dn \nonumber \\
+&- \frac{1}{\sqrt{2\pi}} \int_{0}^{\infty} \exp \left( -\frac{2 \sigma^2 n^2}{1+\sigma^2} \right) dn\\
+&= \frac{\sqrt{2\pi} - \sqrt{\frac{\pi(2\sigma^2)}{1+\sigma^2}}}{2\sqrt{2\pi}}\\
+&= \frac{1}{2} - \frac{1}{2}\sqrt{\frac{\sigma^2}{1+\sigma^2}}
 \end{align}
 For a Rayleigh Distribution with scale $= \sigma$,
 \begin{align}
 E\sbrak{A^2} = 2\sigma^2\\
 \gamma = 2\sigma^2\\
-\therefore P_e = 1 - \sqrt{\frac{2+\gamma}{4\gamma}}
+\therefore P_e = \frac{1}{2} - \frac{1}{2}\sqrt{\frac{\gamma}{2+\gamma}}
 \end{align}
+\begin{figure}
+\centering
+\includegraphics[width=\columnwidth]{./figs/cond/Pe_vs_gamma.png}
+\caption{The value of $P_e$ for $0 \le \gamma \le 10$}
+\label{fig:uni_cdf}
+\end{figure}
 %
 \item
 Assuming that $N$ is a constant, find an expression for $P_e$.  Call this $P_e(N)$
