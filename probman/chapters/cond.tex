@@ -36,8 +36,8 @@ If $N>0$, $F_A(-N) = 0$. Therefore,
 \begin{align}
 P_e &= \int_{-\infty}^{0} F_A(-n) \times f_N(n) dn\\
 &= \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{0} \brak{1-\exp \left( -\frac{n^2}{2\sigma^2} \right) }\exp \left( -\frac{n^2}{2} \right) dn\\
-&= \frac{1}{\sqrt{2\pi}} \int_{0}^{\infty} \exp \left( -\frac{n^2}{2} \right)dn \nonumber \\
-&- \frac{1}{\sqrt{2\pi}} \int_{0}^{\infty} \exp \left( -\frac{(1+ \sigma^2)n^2}{2 \sigma^2} \right) dn\\
+&= \frac{1}{2\sqrt{2\pi}} \int_{-\infty}^{\infty} \exp \left( -\frac{n^2}{2} \right)dn \nonumber \\
+&- \frac{1}{2\sqrt{2\pi}} \int_{-\infty}^{\infty} \exp \left( -\frac{(1+ \sigma^2)n^2}{2 \sigma^2} \right) dn\\
 &= \frac{\sqrt{2\pi} - \sqrt{\frac{\pi(2\sigma^2)}{1+\sigma^2}}}{2\sqrt{2\pi}}\\
 &= \frac{1}{2} - \frac{1}{2}\sqrt{\frac{\sigma^2}{1+\sigma^2}}
 \end{align}
