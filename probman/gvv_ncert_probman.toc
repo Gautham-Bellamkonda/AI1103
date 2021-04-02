@@ -17,5 +17,5 @@
 \contentsline {section}{\numberline {7}Conditional Probability}{10}{section.7}%
 \contentsline {section}{\numberline {8}Two Dimensions}{10}{section.8}%
 \contentsline {section}{\numberline {9}Transform Domain: Moment Generating Function}{11}{section.9}%
-\contentsline {section}{\numberline {10}Uniform to Other: Quantile function}{11}{section.10}%
+\contentsline {section}{\numberline {10}Uniform to Other: Quantile function}{12}{section.10}%
 \contentsline {section}{\numberline {11}Miscellaneous Distributions}{12}{section.11}%
