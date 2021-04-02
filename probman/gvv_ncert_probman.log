@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.12)  2 APR 2021 10:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.12)  2 APR 2021 10:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1875,29 +1875,25 @@ File: ./figs/cond/Pe_vs_gamma.png Graphic file (type png)
 Package pdftex.def Info: ./figs/cond/Pe_vs_gamma.png  used on input line 52.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
 )
-(./chapters/twoD.tex
-<./figs/twoD/scatter_plot.png, id=586, 462.528pt x 346.896pt>
+(./chapters/twoD.tex [10 <./figs/cond/Pe_vs_gamma.png>]
+<./figs/twoD/scatter_plot.png, id=622, 462.528pt x 346.896pt>
 File: ./figs/twoD/scatter_plot.png Graphic file (type png)
 <use ./figs/twoD/scatter_plot.png>
-Package pdftex.def Info: ./figs/twoD/scatter_plot.png  used on input line 47.
+Package pdftex.def Info: ./figs/twoD/scatter_plot.png  used on input line 50.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
- [10 <./figs/cond/Pe_vs_gamma.png>]
-<./figs/twoD/ber_snr_plot.png, id=621, 462.528pt x 346.896pt>
+<./figs/twoD/ber_snr_plot.png, id=623, 462.528pt x 346.896pt>
 File: ./figs/twoD/ber_snr_plot.png Graphic file (type png)
 <use ./figs/twoD/ber_snr_plot.png>
-Package pdftex.def Info: ./figs/twoD/ber_snr_plot.png  used on input line 70.
+Package pdftex.def Info: ./figs/twoD/ber_snr_plot.png  used on input line 73.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 )
-(./chapters/laplace.tex) (./chapters/uni2other.tex [11 <./figs/twoD/scatter_plo
-t.png> <./figs/twoD/ber_snr_plot.png>] (./solutions/10/1/solution.tex
+(./chapters/laplace.tex [11 <./figs/twoD/scatter_plot.png> <./figs/twoD/ber_snr
+_plot.png>]) (./chapters/uni2other.tex (./solutions/10/1/solution.tex
 
 LaTeX Warning: Reference `eq:probman_cdf_U' on page 12 undefined on input line 
 12.
 
-<figs/quantile/quantile.png, id=659, 462.528pt x 346.896pt>
+<figs/quantile/quantile.png, id=665, 462.528pt x 346.896pt>
 File: figs/quantile/quantile.png Graphic file (type png)
 <use figs/quantile/quantile.png>
 Package pdftex.def Info: figs/quantile/quantile.png  used on input line 51.
@@ -1923,8 +1919,8 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 338.
  ) 
 Here is how much of TeX's memory you used:
- 51737 strings out of 481239
- 1281449 string characters out of 5920377
+ 51741 strings out of 481239
+ 1281507 string characters out of 5920377
  1770695 words of memory out of 5000000
  65646 multiletter control sequences out of 15000+600000
  611991 words of font info for 193 fonts, out of 8000000 for 9000
@@ -1941,10 +1937,10 @@ are/texlive/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb></usr/share/texlive
 /fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
 w/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on gvv_ncert_probman.pdf (13 pages, 308460 bytes).
+Output written on gvv_ncert_probman.pdf (13 pages, 310926 bytes).
 PDF statistics:
- 810 PDF objects out of 1000 (max. 8388607)
- 688 compressed objects within 7 object streams
- 353 named destinations out of 1000 (max. 500000)
+ 817 PDF objects out of 1000 (max. 8388607)
+ 695 compressed objects within 7 object streams
+ 357 named destinations out of 1000 (max. 500000)
  322 words of extra memory for PDF output out of 10000 (max. 10000000)
 
