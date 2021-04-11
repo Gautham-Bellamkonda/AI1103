@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.12)  2 APR 2021 11:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.12)  11 APR 2021 18:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1886,34 +1886,56 @@ File: ./figs/twoD/scatter_plot.png Graphic file (type png)
 <use ./figs/twoD/scatter_plot.png>
 Package pdftex.def Info: ./figs/twoD/scatter_plot.png  used on input line 51.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
-<./figs/twoD/ber_snr_plot.png, id=622, 462.528pt x 346.896pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--71
+\OT1/txr/m/n/12 where $\OML/txmi/m/it/12 ^^V$ \OT1/txr/m/n/12 is the mean vec-t
+or,
+ []
+
+LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
+(Font)              scaled to size 9.49997pt on input line 71.
+LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
+(Font)              scaled to size 4.74998pt on input line 71.
+
+Overfull \hbox (3.73674pt too wide) detected at line 157
+ []$[]  \OML/txmi/m/it/12 p [] \OT1/txr/m/n/12 = [] [] [] []$ 
+ []
+
+
+Overfull \hbox (3.73674pt too wide) detected at line 163
+ []$[]  \OML/txmi/m/it/12 p [] \OT1/txr/m/n/12 = [] [] [] []$ 
+ []
+
+<./figs/twoD/ber_snr_plot.png, id=626, 462.528pt x 346.896pt>
 File: ./figs/twoD/ber_snr_plot.png Graphic file (type png)
 <use ./figs/twoD/ber_snr_plot.png>
-Package pdftex.def Info: ./figs/twoD/ber_snr_plot.png  used on input line 74.
+Package pdftex.def Info: ./figs/twoD/ber_snr_plot.png  used on input line 196.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
-) (./chapters/laplace.tex
-Underfull \vbox (badness 1629) has occurred while \output is active []
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [11
 
- <./figs/twoD/scatter_plot.png> <./figs/twoD/ber_snr_plot.png>])
-(./chapters/uni2other.tex (./solutions/10/1/solution.tex
+ <./figs/twoD/scatter_plot.png>]) (./chapters/laplace.tex) (./chapters/uni2othe
+r.tex
+(./solutions/10/1/solution.tex
 
 LaTeX Warning: Reference `eq:probman_cdf_U' on page 12 undefined on input line 
 12.
 
-<figs/quantile/quantile.png, id=662, 462.528pt x 346.896pt>
+[12 <./figs/twoD/ber_snr_plot.png>]
+<figs/quantile/quantile.png, id=694, 462.528pt x 346.896pt>
 File: figs/quantile/quantile.png Graphic file (type png)
 <use figs/quantile/quantile.png>
 Package pdftex.def Info: figs/quantile/quantile.png  used on input line 51.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
-)) (./chapters/misc.tex [12 <./figs/quantile/quantile.png>]) [13
+)) (./chapters/misc.tex
+Underfull \vbox (badness 3884) has occurred while \output is active []
 
-]
+) [13 <./figs/quantile/quantile.png>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 338.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 338.
-
-(./gvv_ncert_probman.aux)
+ (./gvv_ncert_probman.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 338.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 338.
 Package rerunfilecheck Info: File `gvv_ncert_probman.out' has not changed.
@@ -1928,28 +1950,29 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 338.
  ) 
 Here is how much of TeX's memory you used:
- 51741 strings out of 481239
- 1281507 string characters out of 5920377
- 1770695 words of memory out of 5000000
- 65646 multiletter control sequences out of 15000+600000
- 611991 words of font info for 193 fonts, out of 8000000 for 9000
+ 51792 strings out of 481239
+ 1282149 string characters out of 5920377
+ 1770947 words of memory out of 5000000
+ 65676 multiletter control sequences out of 15000+600000
+ 627395 words of font info for 228 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  63i,18n,98p,773b,1166s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/txfonts/rtxsc.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/tx
-fonts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsya.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
-w/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on gvv_ncert_probman.pdf (13 pages, 310967 bytes).
+e/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txf
+onts/rtxsc.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txex.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/txfonts/txsya.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/txfonts/txsyb.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/txfonts/txsyc.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb
+i8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on gvv_ncert_probman.pdf (13 pages, 317864 bytes).
 PDF statistics:
- 817 PDF objects out of 1000 (max. 8388607)
- 695 compressed objects within 7 object streams
- 357 named destinations out of 1000 (max. 500000)
+ 840 PDF objects out of 1000 (max. 8388607)
+ 716 compressed objects within 8 object streams
+ 368 named destinations out of 1000 (max. 500000)
  322 words of extra memory for PDF output out of 10000 (max. 10000000)
 
