@@ -129,11 +129,11 @@ columns=fullflexible
 \bigskip
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
-Download all python codes from 
-\begin{lstlisting}
-https://github.com/GauthamBellamkonda/AI1103/tree/main/Assignment6/Codes
-\end{lstlisting}
-and latex-tikz codes from 
+Download all
+%\begin{lstlisting}
+%https://github.com/GauthamBellamkonda/AI1103/tree/main/Assignment6/Codes
+%\end{lstlisting} 
+latex-tikz codes from 
 \begin{lstlisting}
 https://github.com/GauthamBellamkonda/AI1103/tree/main/Assignment6
 \end{lstlisting}
@@ -147,6 +147,12 @@ f(x;\theta) =
 \end{cases}
 \end{align}
 where $\theta \in (0, \infty)$. Let $X_{(1)} = $ min $ \{ X_1, X_2, \ldots , X_n \} $ and $T = \sum_{i=1}^n X_i $. Then $E(X_{(1)} | T)$ equals $\ldots \ldots \ldots$
+\begin{itemize}
+\item $\dfrac{T}{n^2}$ \\
+\item $\dfrac{T}{n}$ \\
+\item $\dfrac{(n+1)T}{2n}$ \\
+\item $\dfrac{(n+1)^2 T}{4n^2}$
+\end{itemize}
 \section{Solution}
 For $n = 2$, 
 \begin{align}
@@ -157,4 +163,5 @@ E(X_{(1)} | T) &= \int_{ - \infty }^{ \infty } x f_{ X_{(1)} }( x | T ) dx \\
 &= \frac{1}{T} \int_{0}^{T} x dx \\
 &= \frac{T}{2}
 \end{align}
+The given key is $\dfrac{T}{n^2} = \dfrac{T}{4}$ 
 \end{document}
