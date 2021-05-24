@@ -155,14 +155,21 @@ where $\theta \in (0, \infty)$. Let $X_{(1)} = $ min $ \{ X_1, X_2, \ldots , X_n
 \item $\dfrac{(n+1)^2 T}{4n^2}$
 \end{enumerate}
 
-\section{Solution}
-\begin{theorem}[Lehmann–Scheffé theorem]
-If $T$ is a complete sufficient statistic for $\theta$ and 
+\section{Prerequisites}
+\begin{definition}[Complete Statistic]
+The statistic $T$ is said to be complete for the distribution of $X$ if, for every measurable function $g$, if
 \begin{align}
-\label{eqn 2.0.1}
-E(g(T)) = \tau(\theta)
+E(g(T)) = 0 \; \forall \; \theta \Rightarrow \pr{g(T)=0} = 1 
 \end{align}
-then $g(T)$ is the uniformly minimum-variance unbiased estimator (UMVUE) of $\tau(\theta)$.\\
+\end{definition}
+\begin{definition}[Sufficient Statistic]
+A statistic $t = T(X)$ is sufficient for underlying parameter $\theta$ precisely if the conditional probability distribution of the data $X$, given the statistic $t = T(X)$, does not depend on the parameter $\theta$. 
+\end{definition}
+\begin{theorem}[Fischer-Neymann Factorisation theorem]
+If the probability density function is $f_\theta (x)$, then $T$ is sufficient for $\theta$ if and only if nonnegative functions $g$ and $h$ can be found such that
+\begin{align}
+f_\theta (x) = h(x)g_\theta(T(x))
+\end{align}
 \end{theorem}
 \begin{lemma}
 \begin{align}
@@ -199,6 +206,15 @@ The integral in \eqref{eqn} can be interpreted as the Laplace transform $F(s) = 
 \end{align}
 Therefore, $T$ is a complete statistic.
 \end{proof}
+\begin{theorem}[Lehmann–Scheffé theorem]
+If $T$ is a complete sufficient statistic for $\theta$ and 
+\begin{align}
+\label{eqn 2.0.1}
+E(g(T)) = \tau(\theta)
+\end{align}
+then $g(T)$ is the uniformly minimum-variance unbiased estimator (UMVUE) of $\tau(\theta)$.
+\end{theorem}
+\section{Solution}
 By the law of total expectation, 
 \begin{align}
 \label{eqn 2.0.3}

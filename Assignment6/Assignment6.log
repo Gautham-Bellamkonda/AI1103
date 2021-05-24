@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.12)  24 MAY 2021 12:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.12)  24 MAY 2021 12:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1624,69 +1624,71 @@ Underfull \hbox (badness 10000) in paragraph at lines 154--155
 
  []
 
-
-Underfull \hbox (badness 3098) in paragraph at lines 164--166
-\OT1/txr/m/it/12 then $\OML/txmi/m/it/12 g\OT1/txr/m/n/12 (\OML/txmi/m/it/12 T\
-OT1/txr/m/n/12 )$ \OT1/txr/m/it/12 is the uni-formly minimum-variance
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 164--166
-
- []
-
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
-Underfull \hbox (badness 1975) in paragraph at lines 212--214
+Underfull \hbox (badness 1975) in paragraph at lines 228--230
 \OT1/txr/m/n/12 it fol-lows from [] that $\OML/txmi/m/it/12 E\OT1/txr/m/n/12 (\
 OML/txmi/m/it/12 X[]\OMS/txsy/m/n/12 j\OML/txmi/m/it/12 T\OT1/txr/m/n/12 )$ is 
 the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 240--242
+Underfull \hbox (badness 10000) in paragraph at lines 256--258
 
  []
 
 <./Figures/Figure_1.png, id=79, 462.528pt x 346.896pt>
 File: ./Figures/Figure_1.png Graphic file (type png)
 <use ./Figures/Figure_1.png>
-Package pdftex.def Info: ./Figures/Figure_1.png  used on input line 250.
+Package pdftex.def Info: ./Figures/Figure_1.png  used on input line 266.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
 [2 <./Figures/Figure_1.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 254.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 254.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 270.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 270.
  (./Assignment6.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 254.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 254.
-Package rerunfilecheck Info: File `Assignment6.out' has not changed.
-(rerunfilecheck)             Checksum: 1210BCF5FEAE7A75A114051724EF25E7;85.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 254.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 270.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 270.
+
+
+Package rerunfilecheck Warning: File `Assignment6.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Assignment6.out':
+(rerunfilecheck)             Before: 44165A94F55EB2038B520C6487ED7F45;90
+(rerunfilecheck)             After:  13C130A3354DD6B24F21819E56699C70;133.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 270.
  ) 
 Here is how much of TeX's memory you used:
- 40127 strings out of 481239
- 904489 string characters out of 5920377
- 1310879 words of memory out of 5000000
+ 40134 strings out of 481239
+ 904563 string characters out of 5920377
+ 1309891 words of memory out of 5000000
  54526 multiletter control sequences out of 15000+600000
  597113 words of font info for 156 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  60i,16n,91p,479b,1008s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/txfonts/rtxi.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txf
-onts/rtxsc.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txex.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/txfonts/txsya.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/font
-s/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/tim
-es/utmri8a.pfb>
-Output written on Assignment6.pdf (2 pages, 102780 bytes).
+pdfTeX warning (dest): name{equation.2.0.16} has been referenced but does not
+ exist, replaced by a fixed one
+
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/
+texmf-dist/fonts/type1/public/txfonts/rtxi.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfon
+ts/rtxsc.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txex.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/txfonts/txsya.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times
+/utmri8a.pfb>
+Output written on Assignment6.pdf (2 pages, 105735 bytes).
 PDF statistics:
- 155 PDF objects out of 1000 (max. 8388607)
- 121 compressed objects within 2 object streams
- 49 named destinations out of 1000 (max. 500000)
+ 163 PDF objects out of 1000 (max. 8388607)
+ 129 compressed objects within 2 object streams
+ 56 named destinations out of 1000 (max. 500000)
  130 words of extra memory for PDF output out of 10000 (max. 10000000)
 
