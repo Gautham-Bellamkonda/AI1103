@@ -174,14 +174,15 @@ If the probability density function is $f_\theta (x)$, then $T$ is sufficient fo
 f_\theta (x) = h(x)g_\theta(T(x))
 \end{align}
 \end{theorem}
-\begin{lemma}
+\begin{lemma} \label{lemma_sufficient_complete}
 \begin{align}
 T = \sum_{i=1}^{n} X_i
 \end{align}
 is a complete and sufficient statistic. 
 \end{lemma}
-\begin{proof}~\\
-\textit{(Sufficiency)}
+\begin{proof}
+\begin{enumerate}
+\item \textit{(Sufficiency)}
 \begin{align}
 f_{X}(x_1, x_2, \ldots x_n) &= f_{X_1}(x_1)f_{X_2}(x_2) \ldots f_{X_n}(x_n)\\
 &= \dfrac{1}{\theta} \exp\brak{-\dfrac{x_1}{\theta}} \cdots \dfrac{1}{\theta} \exp\brak{-\dfrac{x_n}{\theta}}\\
@@ -194,7 +195,7 @@ g(T, \theta) &= \dfrac{1}{\theta^n} \exp\brak{-\dfrac{T}{\theta}}\\
 h(X) &= 1
 \end{align}
 Therefore, $T$ is a sufficient statistic.\\
-\textit{(Completeness)}\\
+\item \textit{(Completeness)}\\
 $X_i$ follow a gamma distribution, $X_i \sim \Gamma (1, \frac{1}{\theta})$. Hence, $T = \sum_{i=1}^n X_i $ follows a gamma distribution, $T \sim \Gamma (n, \frac{1}{\theta})$. Therefore, the expected value of a function $g$ is
 \begin{align}
 E(g(T)) &= 
@@ -208,6 +209,7 @@ The integral in \eqref{eqn} can be interpreted as the Laplace transform $F(s) = 
 \pr{g(t)=0} = 1
 \end{align}
 Therefore, $T$ is a complete statistic.
+\end{enumerate}
 \end{proof}
 \begin{theorem}[Lehmann–Scheffé theorem]
 If $T$ is a complete sufficient statistic for $\theta$ and 
@@ -218,18 +220,29 @@ E(g(T)) = \tau(\theta)
 then $g(T)$ is the uniformly minimum-variance unbiased estimator (UMVUE) of $\tau(\theta)$.
 \end{theorem}
 \section{Solution}
+\begin{proposition}
+$E(X_{(1)}|T)$ is the uniformly minimum-variance unbiased estimator (UMVUE) of $E(X_{(1)})$
+\end{proposition}
+\begin{proof}
 By the law of total expectation, 
 \begin{align}
 \label{eqn 2.0.3}
 E\brak{E(X_{(1)} | T )} = E(X_{(1)})
 \end{align}
-By Lehmann–Scheffé theorem, with
+We know that $T = \sum_{i=1}^n X_i$ is a complete and sufficient statistic by \ref{lemma_sufficient_complete}. By Lehmann–Scheffé theorem, with
 \begin{align}
 \theta &= X_{(1)},\\ 
 \tau(x) &= E(x),\\
 g(T) &= E(X_{(1)} | T).
 \end{align}
 it follows from \eqref{eqn 2.0.3} that $E(X_{(1)} | T)$ is the UMVUE of $E(X_{(1)})$.
+\end{proof}
+\begin{proposition}
+$\frac{T}{n^2}$ is uniformly minimum-variance unbiased estimator (UMVUE) of $E(X_{(1)})$
+\end{proposition}
+\begin{proof}
+\begin{enumerate}
+\item Let's find the probability distribution function and the expectation value of $X_{(1)}$ : 
 \begin{align}
 \pr{X_{(1)} > x} &= \pr{X_1 > x}\ldots \pr{X_n > x}\\
 &= (1-F_{X_{1}}(x))\ldots(1-F_{X_{n}}(x))\\
@@ -242,6 +255,7 @@ Therefore, $X_{(1)}$ follows an exponential distribution with mean $\dfrac{\thet
 \begin{align}
 E(X_{(1)}) = \frac{\theta}{n}
 \end{align}
+\item $\frac{T}{n^2}$ is uniformly minimum-variance unbiased estimator (UMVUE) of $E(X_{(1)})$, since $E\brak{\frac{T}{n^2}} = E(X_{(1)})$ : \\
 Note that,
 \begin{align}
 E\brak{\frac{T}{n^2}} &= E\brak{\frac{\sum_{i=1}^n X_i}{n^2}}\\
@@ -251,6 +265,7 @@ E\brak{\frac{T}{n^2}} &= E\brak{\frac{\sum_{i=1}^n X_i}{n^2}}\\
 &= \frac{\theta}{n}\\
 &= E(X_{(1)})
 \end{align}
+\end{enumerate}
 Therefore, by Lehmann–Scheffé theorem, with
 \begin{align}
 \theta &= X_{(1)},\\
@@ -258,7 +273,7 @@ Therefore, by Lehmann–Scheffé theorem, with
 g(T) &= \frac{T}{n^2},
 \end{align}
 it follows that $\dfrac{T}{n^2}$ is UMVUE of $E(X_{(1)})$.\\
-
+\end{proof}
 Since there exists a unique UMVUE for $E(X_{(1)})$, it follows that 
 \begin{align}
 E(X_{(1)} | T) = \frac{T}{n^2} 
