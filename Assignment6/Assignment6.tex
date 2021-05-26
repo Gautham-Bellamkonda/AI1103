@@ -220,7 +220,7 @@ E(g(T)) = \tau(\theta)
 then $g(T)$ is the uniformly minimum-variance unbiased estimator (UMVUE) of $\tau(\theta)$.
 \end{theorem}
 \section{Solution}
-\begin{proposition}
+\begin{proposition} \label{prop_3.1}
 $E(X_{(1)}|T)$ is the uniformly minimum-variance unbiased estimator (UMVUE) of $E(X_{(1)})$
 \end{proposition}
 \begin{proof}
@@ -237,7 +237,7 @@ g(T) &= E(X_{(1)} | T).
 \end{align}
 it follows from \eqref{eqn 2.0.3} that $E(X_{(1)} | T)$ is the UMVUE of $E(X_{(1)})$.
 \end{proof}
-\begin{proposition}
+\begin{proposition} \label{prop_3.2}
 $\frac{T}{n^2}$ is uniformly minimum-variance unbiased estimator (UMVUE) of $E(X_{(1)})$
 \end{proposition}
 \begin{proof}
@@ -274,7 +274,7 @@ g(T) &= \frac{T}{n^2},
 \end{align}
 it follows that $\dfrac{T}{n^2}$ is UMVUE of $E(X_{(1)})$.\\
 \end{proof}
-Since there exists a unique UMVUE for $E(X_{(1)})$, it follows that 
+Since there exists a unique UMVUE for $E(X_{(1)})$, it follows from Proposition \ref{prop_3.1} and Proposition \ref{prop_3.2} that 
 \begin{align}
 E(X_{(1)} | T) = \frac{T}{n^2} 
 \end{align}
