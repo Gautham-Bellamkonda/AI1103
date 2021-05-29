@@ -196,7 +196,7 @@ h(X) &= 1
 \end{align}
 Therefore, $T$ is a sufficient statistic.\\
 \item \textit{(Completeness)}\\
-$X_i$ follow a gamma distribution, $X_i \sim \Gamma (1, \frac{1}{\theta})$. Hence, $T = \sum_{i=1}^n X_i $ follows a gamma distribution, $T \sim \Gamma (n, \frac{1}{\theta})$. Therefore, the expected value of a function $g$ is
+$X_i$ follow a gamma distribution, $X_i \sim \Gamma \brak{1, \frac{1}{\theta}}$. Hence, $T = \sum_{i=1}^n X_i $ follows a gamma distribution, $T \sim \Gamma \brak{n, \frac{1}{\theta}}$. Therefore, the expected value of a function $g$ is
 \begin{align}
 E(g(T)) &= 
 \int_0 ^{\infty} g(t) \dfrac{t^{n-1} e^{-\frac{t}{\theta}}}{\theta^n(n-1)!} dt\\ 
@@ -209,7 +209,7 @@ where,
 f(t) &= t^{n-1}g(t)\\
 F \brak{\frac{1}{\theta}} &= \text{Laplace Transform of} f(t) \text{ at } \theta
 \end{align}
-Since, $E(g(T))=0$ for all $\theta > 0$, 
+Since, $E\brak{g(T)}=0$ for all $\theta > 0$, 
 \begin{align}
 \label{eqn}
 F \brak{\frac{1}{\theta}} &= 0 \text{ for all } \theta > 0.
