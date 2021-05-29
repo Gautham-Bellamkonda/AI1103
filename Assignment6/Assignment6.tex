@@ -199,15 +199,28 @@ Therefore, $T$ is a sufficient statistic.\\
 $X_i$ follow a gamma distribution, $X_i \sim \Gamma (1, \frac{1}{\theta})$. Hence, $T = \sum_{i=1}^n X_i $ follows a gamma distribution, $T \sim \Gamma (n, \frac{1}{\theta})$. Therefore, the expected value of a function $g$ is
 \begin{align}
 E(g(T)) &= 
-\int_0 ^{\infty} g(t) \dfrac{t^{n-1} e^{-\frac{t}{\theta}}}{\theta^n(n-1)!} dt\\ \label{eqn}
+\int_0 ^{\infty} g(t) \dfrac{t^{n-1} e^{-\frac{t}{\theta}}}{\theta^n(n-1)!} dt\\ 
 &= \frac{1}{\theta^n (n-1)!} \int_0 ^{\infty} g(t) t^{n-1} e^{-\frac{t}{\theta}} dt\\ 
 &= \frac{1}{\theta^n (n-1)!} F \brak{\frac{1}{\theta}}\\
 &= 0 \text{ for all } \theta > 0.
 \end{align}
-The integral in \eqref{eqn} can be interpreted as the Laplace transform $F(s) = \int_0 ^{\infty} f(t)e^{-st} dt $ of the function $ f(t) = t^{n-1}g(t)$ evaluated at $\frac{1}{\theta}$. If this transform is $0$ for all $\theta$ in $(0, \infty)$, then $f(t)=0$ almost everywhere in $(0,\infty)$. Therefore, $g(t) = 0$ almost everywhere in $(0, \infty)$ and hence, 
+where, 
 \begin{align}
+f(t) &= t^{n-1}g(t)\\
+F \brak{\frac{1}{\theta}} &= \text{Laplace Transform of} f(t) \text{ at } \theta
+\end{align}
+Since, $E(g(T))=0$ for all $\theta > 0$, 
+\begin{align}
+\label{eqn}
+F \brak{\frac{1}{\theta}} &= 0 \text{ for all } \theta > 0.
+\end{align}
+From the theory of Laplace transforms, it follows from \eqref{eqn} that
+\begin{align}
+f(t)=0 \text{ almost everywhere in } (0, \infty)\\
+g(t)=0 \text{ almost everywhere in } (0, \infty)\\
 \pr{g(t)=0} = 1
 \end{align}
+
 Therefore, $T$ is a complete statistic.
 \end{enumerate}
 \end{proof}
