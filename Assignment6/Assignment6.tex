@@ -159,6 +159,16 @@ where $\theta \in (0, \infty)$. Let $X_{(1)} = $ min $ \{ X_1, X_2, \ldots , X_n
 \begin{lemma}[Sum of Gamma random variables]
 Suppose that $X_1, X_2, X_3, \ldots X_n$ are $n$ gamma variables with parameters $k$ and $\theta$, $X_i \sim \Gamma(k, \theta)$. Then the sum $T = \sum_{i=1}^{n} X_i$ follows a gamma distribution with parameters $nk$ and $\theta$, $T \sim \Gamma(nk, \theta)$
 \end{lemma}
+\begin{definition}[Laplace transform]
+Laplace transform is an integral transform that converts a real function of a real variable $t$ to a function of a complex variable $s$. The laplace transform of a function $f(t)$ evaluated at $s$ is defined by
+\begin{align}
+F(s) = \int_0^{\infty} f(t) e^{-st} dt
+\end{align}
+\end{definition}
+\begin{lemma}
+\label{lemma_laplace_transform}
+If the laplace transform of a function $f(t)$ at $s$ is $0$ for all $s>0$, then the function $f(t) = 0$ almost everywhere in $(0, \infty)$.
+\end{lemma}
 \begin{definition}[Complete Statistic]
 The statistic $T$ is said to be complete for the distribution of $X$ if, for every measurable function $g$, if
 \begin{align}
@@ -207,14 +217,14 @@ E(g(T)) &=
 where, 
 \begin{align}
 f(t) &= t^{n-1}g(t)\\
-F \brak{\frac{1}{\theta}} &= \text{Laplace Transform of} f(t) \text{ at } \theta
+F \brak{\frac{1}{\theta}} &= \text{Laplace Transform of} f(t) \text{ at } \frac{1}{\theta}
 \end{align}
 Since, $E\brak{g(T)}=0$ for all $\theta > 0$, 
 \begin{align}
 \label{eqn}
 F \brak{\frac{1}{\theta}} &= 0 \text{ for all } \theta > 0.
 \end{align}
-From the theory of Laplace transforms, it follows from \eqref{eqn} that
+By Lemma \ref{lemma_laplace_transform} it follows from \eqref{eqn} that
 \begin{align}
 f(t)=0 \text{ almost everywhere in } (0, \infty)\\
 g(t)=0 \text{ almost everywhere in } (0, \infty)\\
