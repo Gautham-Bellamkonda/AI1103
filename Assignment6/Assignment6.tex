@@ -159,6 +159,28 @@ where $\theta \in (0, \infty)$. Let $X_{(1)} = $ min $ \{ X_1, X_2, \ldots , X_n
 \begin{lemma}[Sum of Gamma random variables]
 Suppose that $X_1, X_2, X_3, \ldots X_n$ are $n$ gamma variables with parameters $k$ and $\theta$, $X_i \sim \Gamma(k, \theta)$. Then the sum $T = \sum_{i=1}^{n} X_i$ follows a gamma distribution with parameters $nk$ and $\theta$, $T \sim \Gamma(nk, \theta)$
 \end{lemma}
+\begin{lemma}[Expectation of $X_{(1)}$]
+\label{lemma_2.2}
+Let $X_1, X_2, \ldots , X_n$ be a random sample of size $n \; ( \geq 2 ) $ from an exponential distribution with scale parameter $\theta$. Let $X_{(1)}$ be the min$ \{ X_1, X_2, \ldots , X_n \} $. Then, expectation of $X_{(1)}$, 
+\begin{align}
+E(X_{(1)}) = \frac{\theta}{n}
+\end{align}
+\begin{proof}
+Let's find the probability distribution function and the expectation value of $X_{(1)}$ : 
+\begin{align}
+\pr{X_{(1)} > x} &= \pr{X_1 > x}\ldots \pr{X_n > x}\\
+&= (1-F_{X_{1}}(x))\ldots(1-F_{X_{n}}(x))\\
+&= (1-F_{X_{1}}(x))^n \\
+&= \exp\brak{-\frac{nx}{\theta}}\\
+F_{X_{(1)}}(x) &= 1 - \exp\brak{-\frac{nx}{\theta}}\\
+f_{X_{(1)}}(x) &= \frac{n}{\theta} \exp\brak{-\frac{nx}{\theta}}
+\end{align}
+Therefore, $X_{(1)}$ follows an exponential distribution with mean $\dfrac{\theta}{n}$.
+\begin{align}
+E(X_{(1)}) = \frac{\theta}{n}
+\end{align}
+\end{proof}
+\end{lemma}
 \begin{definition}[Laplace transform]
 Laplace transform is an integral transform that converts a real function of a real variable $t$ to a function of a complex variable $s$. The laplace transform of a function $f(t)$ evaluated at $s$ is defined by
 \begin{align}
@@ -264,21 +286,7 @@ it follows from \eqref{eqn 2.0.3} that $E(X_{(1)} | T)$ is the UMVUE of $E(X_{(1
 $\frac{T}{n^2}$ is uniformly minimum-variance unbiased estimator (UMVUE) of $E(X_{(1)})$
 \end{proposition}
 \begin{proof}
-\begin{enumerate}
-\item Let's find the probability distribution function and the expectation value of $X_{(1)}$ : 
-\begin{align}
-\pr{X_{(1)} > x} &= \pr{X_1 > x}\ldots \pr{X_n > x}\\
-&= (1-F_{X_{1}}(x))\ldots(1-F_{X_{n}}(x))\\
-&= (1-F_{X_{1}}(x))^n \\
-&= \exp\brak{-\frac{nx}{\theta}}\\
-F_{X_{(1)}}(x) &= 1 - \exp\brak{-\frac{nx}{\theta}}\\
-f_{X_{(1)}}(x) &= \frac{n}{\theta} \exp\brak{-\frac{nx}{\theta}}
-\end{align}
-Therefore, $X_{(1)}$ follows an exponential distribution with mean $\dfrac{\theta}{n}$.
-\begin{align}
-E(X_{(1)}) = \frac{\theta}{n}
-\end{align}
-\item $\frac{T}{n^2}$ is uniformly minimum-variance unbiased estimator (UMVUE) of $E(X_{(1)})$, since $E\brak{\frac{T}{n^2}} = E(X_{(1)})$ : \\
+$\frac{T}{n^2}$ is uniformly minimum-variance unbiased estimator (UMVUE) of $E(X_{(1)})$, since $E\brak{\frac{T}{n^2}} = E(X_{(1)})$ : \\
 Note that,
 \begin{align}
 E\brak{\frac{T}{n^2}} &= E\brak{\frac{\sum_{i=1}^n X_i}{n^2}}\\
@@ -286,9 +294,8 @@ E\brak{\frac{T}{n^2}} &= E\brak{\frac{\sum_{i=1}^n X_i}{n^2}}\\
 &= \sum_{i=1}^n \frac{E(X_i)}{n^2}\\
 &= \sum_{i=1}^n \frac{\theta}{n^2}\\
 &= \frac{\theta}{n}\\
-&= E(X_{(1)})
+&= E(X_{(1)}) \text{ (by Lemma \ref{lemma_2.2})}
 \end{align}
-\end{enumerate}
 Therefore, by Lehmann–Scheffé theorem, with
 \begin{align}
 \theta &= X_{(1)},\\
